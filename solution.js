@@ -1,8 +1,8 @@
-let A=[3,4,3,2,3,-1,3,3]
+let A=[1,2,3,4,4,5,6,7]
 
-//Function solution(A)
+
 function solution(A){
-    //if does have a dominator return -1
+
     if(!A || A.length === 0){
         return -1;
     }
@@ -30,6 +30,9 @@ function solution(A){
     for( let key in obj){
         if(obj[key].length > maxArr.length){
             maxArr = obj[key];
+        }
+        if (maxArr<2){
+            return -1;
         }
     }
     
